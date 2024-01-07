@@ -7,7 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Drugs\Commands\UpdateDrug\**" />
+    <EmbeddedResource Remove="Drugs\Commands\UpdateDrug\**" />
+    <None Remove="Drugs\Commands\UpdateDrug\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.22" />
   </ItemGroup>
 

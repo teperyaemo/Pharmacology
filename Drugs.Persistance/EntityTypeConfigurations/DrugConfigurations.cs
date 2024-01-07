@@ -10,6 +10,8 @@ namespace Drugs.Persistance.EntityTypeConfigurations
         {
             builder.HasKey(drug => drug.DrugId);
             builder.HasIndex(drug => drug.DrugId).IsUnique();
+            builder.HasMany(drug => drug.Versions).WithOne(version => version.Drug)
+                .HasForeignKey(version => version.DrugId);
         }
     }
 }
