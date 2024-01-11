@@ -1,7 +1,7 @@
 ﻿using Drugs.Domain;
 using MediatR;
 
-namespace Drugs.Application.DrugVersions.Commands
+namespace Drugs.Application.DrugVersions.Commands.CreateDrugVersion
 {
     public class CreateDrugVersionCommand : IRequest<Guid>
     {
