@@ -2,13 +2,13 @@
 using MediatR;
 using Drugs.Domain;
 
-namespace Drugs.Application.Groups.Commands
+namespace Drugs.Application.Groups.Commands.CreateGroup
 {
     public class CreateGroupCommandHandler : IRequestHandler<CreateGroupCommand, Guid>
     {
         private readonly IDrugsDbContext _dbContext;
 
-        public CreateGroupCommandHandler(IDrugsDbContext dbContext) => 
+        public CreateGroupCommandHandler(IDrugsDbContext dbContext) =>
             _dbContext = dbContext;
 
         public async Task<Guid> Handle(CreateGroupCommand request, CancellationToken cancellationToken)

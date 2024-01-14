@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Drugs.Application.Groups.Commands
+namespace Drugs.Application.Groups.Commands.CreateGroup
 {
     public class CreateGroupCommand : IRequest<Guid>
     {
