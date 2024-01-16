@@ -1,5 +1,8 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Drugs.Application.Interfaces;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+
 namespace Drugs.Application
 {
     public static class DependencyInjection
