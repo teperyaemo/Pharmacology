@@ -8,7 +8,7 @@ namespace Drugs.Application.DrugVersions.Commands.CreateDrugVersion
         public Guid UserId { get; set; }
         public Guid DrugId { get; set; }
         public string Name { get; set; }
-        public List<PharmaGroup>? Groups { get; set; }
+        public string[]? Groups { get; set; }
         public string? ActiveSubstance { get; set; }
         public string? MechanismOfAction { get; set; }
         public string? Aindications { get; set; }

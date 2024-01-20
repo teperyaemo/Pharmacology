@@ -19,6 +19,7 @@ namespace Drugs.Application.Drugs.Commands.CreateDrug
                 DrugId = Guid.NewGuid(),
                 UpdateDate = DateTime.Now
             };
+            request.DrugVersion.DrugId = drug.DrugId;
             drug.Versions?.Add(request.DrugVersion);
 
             await _dbContext.Drugs.AddAsync(drug);

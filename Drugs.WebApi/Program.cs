@@ -17,6 +17,7 @@ public class Program
         });
         builder.Services.AddApplication();
         builder.Services.AddPersistance(builder.Configuration);
+        builder.Services.AddControllers().AddNewtonsoftJson();
         builder.Services.AddCors(options =>
         {
             options.AddPolicy("AllowAll", policy =>

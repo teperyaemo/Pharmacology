@@ -19,19 +19,21 @@ namespace Drugs.Application.Drugs.Queries.GetDrugList
 
         public async Task<DrugListVm> Handle(GetDrugListQuery request, CancellationToken cancellationToken)
         {
-
             //проверить быстродействие разных исполнений метода
-            var drugsQuery = await _dbContext.Drugs.Where(drug => drug.Versions.Last().Approved == true)
+            var drugsQuery = await _dbContext.Versions.Where(drug => drug.Approved == true)
                 .ProjectTo<DrugListDto>(_mapper.ConfigurationProvider)
                 .ToListAsync(cancellationToken);
 
-            if (string.IsNullOrWhiteSpace(request.Name))
+            if (!string.IsNullOrWhiteSpace(request.Name))
             {
                 drugsQuery = (List<DrugListDto>)drugsQuery.Where(drug => drug.Name.Contains(request.Name));
             }
-            if (request.Groups.Count != 0)
+            if(request.Groups != null && request.Groups?.Length != 0)
             {
-                drugsQuery = (List<DrugListDto>)drugsQuery.Where(drug => (bool)(drug.Groups?.Contains(request.Groups.First())));
+                for(int i = 0; i < request.Groups?.Length; i++)
+                {
+                    drugsQuery = (List<DrugListDto>)drugsQuery.Where(drug => drug.Groups.Contains(request.Groups[i]));
+                }
             }
 
             return new DrugListVm { DrugList = drugsQuery };

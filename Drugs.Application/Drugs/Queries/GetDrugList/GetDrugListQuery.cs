@@ -11,6 +11,6 @@ namespace Drugs.Application.Drugs.Queries.GetDrugList
     public class GetDrugListQuery : IRequest<DrugListVm>
     {
         public string? Name {  get; set; }
-        public List<PharmaGroup>? Groups { get; set; }
+        public string[]? Groups { get; set; }
     }
 }

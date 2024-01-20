@@ -8,12 +8,17 @@
 
   <ItemGroup>
     <Compile Remove="Drugs\Commands\UpdateDrug\**" />
+    <Compile Remove="Groups\**" />
     <EmbeddedResource Remove="Drugs\Commands\UpdateDrug\**" />
+    <EmbeddedResource Remove="Groups\**" />
     <None Remove="Drugs\Commands\UpdateDrug\**" />
+    <None Remove="Groups\**" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.9.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.0" />
     <PackageReference Include="MediatR" Version="12.2.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.22" />
   </ItemGroup>

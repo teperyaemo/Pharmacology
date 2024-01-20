@@ -14,7 +14,6 @@ namespace Drugs.Persistance
     {
         public DbSet<Drug> Drugs {  get; set; }
         public DbSet<DrugVersion> Versions { get; set; }
-        public DbSet<PharmaGroup> Groups { get; set; }
 
         public DrugsDbContext(DbContextOptions<DrugsDbContext> options)
             : base(options) { }
@@ -23,7 +22,6 @@ namespace Drugs.Persistance
         {
             builder.ApplyConfiguration(new DrugConfigurations());
             builder.ApplyConfiguration(new DrugVersionConfigurations());
-            builder.ApplyConfiguration(new PharmaGroupConfigurations());
             base.OnModelCreating(builder);
         }
     }

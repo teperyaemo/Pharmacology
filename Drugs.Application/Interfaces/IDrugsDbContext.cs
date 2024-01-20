@@ -12,7 +12,6 @@ namespace Drugs.Application.Interfaces
     {
         DbSet<Drug> Drugs { get; set; }
         DbSet<DrugVersion> Versions { get; set; }
-        DbSet<PharmaGroup> Groups { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }

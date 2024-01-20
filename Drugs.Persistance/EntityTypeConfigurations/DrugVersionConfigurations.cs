@@ -10,8 +10,6 @@ namespace Drugs.Persistance.EntityTypeConfigurations
         {
             builder.HasKey(version => version.VersionId);
             builder.HasIndex(version => version.VersionId).IsUnique();
-            builder.HasMany(version => version.Groups)
-                .WithMany(groups => groups.Versions);
         }
     }
 }
