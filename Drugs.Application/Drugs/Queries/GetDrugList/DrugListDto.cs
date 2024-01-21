@@ -8,7 +8,7 @@ namespace Drugs.Application.Drugs.Queries.GetDrugList
     {
         public Guid DrugId { get; set; }
         public string Name { get; set; }
-        public string[]? Groups { get; set; }
+        public List<string>? Groups { get; set; }
 
         public void Mapping(Profile profile)
         {

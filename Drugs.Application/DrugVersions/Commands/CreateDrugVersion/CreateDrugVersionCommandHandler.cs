@@ -28,7 +28,7 @@ namespace Drugs.Application.DrugVersions.Commands.CreateDrugVersion
                 ByEffect = request.ByEffect,
                 DirectionsForUseAndDose = request.DirectionsForUseAndDose,
                 Recipe = request.Recipe,
-                CreationDate = DateTime.Now,
+                CreationDate = DateTime.UtcNow,
                 Approved = false
             };
 

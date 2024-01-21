@@ -7,8 +7,8 @@ namespace Drugs.WebApi.Models
 {
     public class GetAllDrugsDto : IMapWith<GetDrugListQuery>
     {
-        string? Name { get; set; }
-        string[]? Groups { get; set; }
+        public string? Name { get; set; }
+        public List<string>? Groups { get; set; }
 
         public void Mapping(Profile profile)
         {

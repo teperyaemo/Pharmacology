@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Drugs.WebApi.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     public class DrugController : BaseController
     {
         private readonly IMapper _mapper;
@@ -37,9 +37,9 @@ namespace Drugs.WebApi.Controllers
         [HttpPost]
         public async Task<ActionResult<Guid>> CreateDrug([FromBody] CreateDrugDto createDrugDto)
         {
-            var command = _mapper.Map<CreateDrugCommand>(createDrugDto);
-            command.DrugVersion.UserId = UserId;
-            var drugId = await Mediator.Send(command);
+            var createDrugcommand = _mapper.Map<CreateDrugCommand>(createDrugDto);
+            createDrugcommand.DrugVersion.UserId = UserId;
+            var drugId = await Mediator.Send(createDrugcommand);
             return Ok(drugId);
         }
 

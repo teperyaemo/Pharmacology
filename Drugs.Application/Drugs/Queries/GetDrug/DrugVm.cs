@@ -11,7 +11,7 @@ namespace Drugs.Application.Drugs.Queries.GetDrug
         public DateTime UpdateDate { get; set; }
         
         public string Name { get => LastDrugVersion.Name; set { } }
-        public string[]? Groups { get => LastDrugVersion.Groups; set { } }
+        public List<string>? Groups { get => LastDrugVersion.Groups; set { } }
         public string? ActiveSubstance { get => LastDrugVersion.ActiveSubstance; set { } }
         public string? MechanismOfAction { get => LastDrugVersion.MechanismOfAction; set { } }
         public string? Aindications { get => LastDrugVersion.Aindications; set { } }

@@ -8,7 +8,7 @@ namespace Drugs.WebApi.Models
     public class CreateDrugDto : IMapWith<CreateDrugCommand>
     {
         public string Name { get; set; }
-        public string[]? Groups { get; set; }
+        public List<string>? Groups { get; set; }
         public string? ActiveSubstance { get; set; }
         public string? MechanismOfAction { get; set; }
         public string? Aindications { get; set; }
