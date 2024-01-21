@@ -26,7 +26,7 @@ namespace Drugs.WebApi.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<DrugVm>> GetDrug(Guid id)
         {
-            var query = new DrugVm
+            var query = new GetDrugQuery
             {
                 DrugId = id
             };

@@ -25,9 +25,8 @@ namespace Drugs.Application.Drugs.Queries.GetDrug
 
         public async Task<DrugVm> Handle(GetDrugQuery request, CancellationToken cancellationToken)
         {
-            var entity = await _dbContext.Drugs.FirstOrDefaultAsync(drug =>
+            var entity = await _dbContext.Drugs.Include(v => v.Versions).FirstOrDefaultAsync(drug =>
             drug.DrugId == request.DrugId, cancellationToken);
-
             if (entity == null)
             {
                 throw new NotFoundException(nameof(Drug), request.DrugId);
