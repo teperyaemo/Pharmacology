@@ -1,6 +1,4 @@
-﻿using Drugs.Application.Interfaces;
-using MediatR;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
 namespace Drugs.Application

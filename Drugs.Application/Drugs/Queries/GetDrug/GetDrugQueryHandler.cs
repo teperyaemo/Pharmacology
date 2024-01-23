@@ -3,11 +3,6 @@ using Drugs.Application.Interfaces;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Drugs.Application.Common.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Drugs.Domain;
 
 namespace Drugs.Application.Drugs.Queries.GetDrug

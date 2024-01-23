@@ -14,9 +14,9 @@ namespace Drugs.Application.Drugs.Queries.GetDrugList
         {
             profile.CreateMap<DrugVersion, DrugListDto>()
                 .ForMember(drugListVm => drugListVm.Name,
-                opt => opt.MapFrom(drugVersion => drugVersion.Name))
+                    opt => opt.MapFrom(drugVersion => drugVersion.Name))
                 .ForMember(drugListVm => drugListVm.Groups,
-                opt => opt.MapFrom(drugVersion => drugVersion.Groups));
+                    opt => opt.MapFrom(drugVersion => drugVersion.Groups));
         }
     }
 }

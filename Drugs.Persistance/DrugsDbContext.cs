@@ -2,11 +2,6 @@
 using Drugs.Domain;
 using Drugs.Persistance.EntityTypeConfigurations;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Drugs.Persistance
 {

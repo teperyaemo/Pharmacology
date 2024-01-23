@@ -1,6 +1,7 @@
 ﻿using Drugs.Application.Interfaces;
 using Drugs.Domain;
 using MediatR;
+
 namespace Drugs.Application.Drugs.Commands.CreateDrug
 {
     public class CreateDrugCommandHandler : IRequestHandler<CreateDrugCommand, Guid>

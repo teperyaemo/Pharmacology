@@ -8,7 +8,6 @@ namespace Drugs.Application.Drugs.Queries.GetDrug
     {
         public Guid DrugId {  get; set; }
         public DateTime UpdateDate { get; set; }
-        
         public string Name { get; set; }
         public List<string>? Groups { get; set; }
         public string? ActiveSubstance { get; set; }
